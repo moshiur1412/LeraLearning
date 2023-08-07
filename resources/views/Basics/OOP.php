@@ -20,8 +20,24 @@ class Car {
         return $this->addSize($this->size);
     }
 
-   public function printAll(){
+    public function setName($name){
+        return $this->name = $name;
+    }
+    public function getName(){
+        return strtoupper($this->name);
+    }
 
+    public function setColor($color){
+        return $this->color = $color;
+    }
+
+    public function getColor(){
+        return $this->color;
+    }
+
+
+   public function printAll(){
+    echo "Car Name: ", $this->getName(), "\nCar Color: ", $this->getColor(), "\nCar Size: ", $this->getSize();
    }
 
   
