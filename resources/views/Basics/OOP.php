@@ -1,23 +1,31 @@
 <?php 
 
-class Car {
-
-    // Propertices 
+class Fruit {
     public $name;
-    private $size;
-    protected $color;
-
-    public function __invoke(...$a){
-        return $a;
+    public $color;
+    public function __construct($name, $color) {
+      $this->name = $name;
+      $this->color = $color;
     }
-
+    public function intro() {
+      echo "The fruit is {$this->name} and the color is {$this->color}.";
+    }
+  }
   
+  
+  
+  
+  // Strawberry is inherited from Fruit
+  class Strawberry extends Fruit {
+    public function message() {
+      echo "Am I a fruit or a berry? ";
+    }
+  }
 
-}
+  $strawberry = new Strawberry("Apple", "red");
+  $strawberry->intro();
+  $strawberry->message();
 
-
-$obj = new Car();
-print_r($obj(4, 5,4,5,6,7,8,4));
 
 
 
